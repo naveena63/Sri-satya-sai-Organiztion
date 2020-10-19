@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Sri satya sai seva organization</string>
+    <string name="label_network_error_message">network issue</string>
+    <string name="label_network_button_text">Tryagain</string>
+
+    <string name="mobile"><font size="10">Mobile Number</font></string>
+    <string name="password"><font size="10">Password</font></string>
+    <string name="username"><font size="10">username</font></string>
+    <string name="login_now">login</string>
+    <string name="register_now">Register</string>
+    <string name="don_t_remember_password">Don\'t Remember password?</string>
+    <string name="dont_have_an_account">Don\'t have an account?</string>
+    <string name="already_have_account">Already have an account?Login</string>
+    <string name="sign_in_with_facebook">Sign in with Facebook</string>
+    <string name="or">or</string>
+    <string name="dob"><font size="10">Date of birth</font></string>
+</resources>
