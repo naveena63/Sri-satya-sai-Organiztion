@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -45,8 +44,7 @@ Button btn_login;
         prefManager = new PrefManager(this);
         link_signup=findViewById(R.id.link_signup);
 
-      //  input_paswrd.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
-        input_paswrd.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD | InputType.TYPE_CLASS_TEXT );
+
         link_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,7 +83,7 @@ Button btn_login;
         final String password = input_paswrd.getText().toString();
         final String mobile = input_mobilenum.getText().toString();
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://tubaticsoftsolutions.com/sssso/api/Login/do_login",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Urls.login,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -115,7 +113,7 @@ Button btn_login;
 
 
 
-                                    Intent intent = new Intent(LoginActivity.this, HomePageActivity.class);
+                                    Intent intent = new Intent(LoginActivity.this, BottomPageActivity.class);
                                     startActivity(intent);
                                     finish();
 

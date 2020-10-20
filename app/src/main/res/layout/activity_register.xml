@@ -7,12 +7,12 @@
     android:background="@drawable/bg_login"
     android:id="@+id/relative_layout"
     tools:context=".LoginActivity">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bg_login"
         tools:context=".LoginActivity">
-
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_left"

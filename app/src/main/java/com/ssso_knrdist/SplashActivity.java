@@ -38,7 +38,7 @@ TextView spals_text;
                 }
                 else
                 {
-                    Intent intent = new Intent(SplashActivity.this, HomePageActivity.class);
+                    Intent intent = new Intent(SplashActivity.this, BottomPageActivity.class);
                     startActivity(intent);
                     finish();
                 }

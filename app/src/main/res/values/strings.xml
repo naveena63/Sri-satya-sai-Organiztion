@@ -14,4 +14,6 @@
     <string name="sign_in_with_facebook">Sign in with Facebook</string>
     <string name="or">or</string>
     <string name="dob"><font size="10">Date of birth</font></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
