@@ -1,4 +1,4 @@
-package com.ssso_knrdist;
+package com.ssso_knrdist.Activties;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,6 +19,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.ssso_knrdist.BottomPageActivity;
+import com.ssso_knrdist.PrefManager;
+import com.ssso_knrdist.R;
 import com.ssso_knrdist.Utils.ApiCallingFlow;
 import com.ssso_knrdist.Utils.Urls;
 

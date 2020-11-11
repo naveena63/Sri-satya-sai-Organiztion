@@ -6,12 +6,12 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_login"
     android:id="@+id/relative_layout"
-    tools:context=".LoginActivity">
+    tools:context=".Activties.LoginActivity">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_login"
-    tools:context=".LoginActivity">
+    tools:context=".Activties.LoginActivity">
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -49,6 +49,7 @@
         android:inputType="phone"
         android:padding="16dp"
         android:maxLength="10"
+        android:textColor="@color/white"
         android:textColorHint="@color/login_form_details"
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"

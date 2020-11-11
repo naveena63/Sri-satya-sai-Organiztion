@@ -1,4 +1,4 @@
-package com.ssso_knrdist;
+package com.ssso_knrdist.Activties;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,6 +19,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.ssso_knrdist.BottomPageActivity;
+import com.ssso_knrdist.PrefManager;
+import com.ssso_knrdist.R;
 import com.ssso_knrdist.Utils.ApiCallingFlow;
 import com.ssso_knrdist.Utils.Urls;
 
@@ -48,7 +51,7 @@ Button btn_login;
         link_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(LoginActivity.this,RegisterActivity.class);
+                Intent intent=new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });
@@ -127,6 +130,8 @@ Button btn_login;
                             } else if (status.equals("0")) {
                                 Toast.makeText(LoginActivity.this, object.getString("msg"), Toast.LENGTH_SHORT).show();
                             } else if (status.equals("error1")) {
+                                Toast.makeText(LoginActivity.this, object.getString("msg"), Toast.LENGTH_SHORT).show();
+                            }else if (status.equals("error2")) {
                                 Toast.makeText(LoginActivity.this, object.getString("msg"), Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {

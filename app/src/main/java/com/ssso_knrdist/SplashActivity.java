@@ -1,7 +1,5 @@
 package com.ssso_knrdist;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,10 +8,13 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.ssso_knrdist.Activties.LoginActivity;
+
 public class SplashActivity extends AppCompatActivity {
 PrefManager prefManager;
 ImageView logo;
 TextView spals_text;
+    Handler handler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,12 +23,12 @@ TextView spals_text;
         spals_text=findViewById(R.id.spals_text);
         prefManager = new PrefManager(this);
 
-        Animation an1= AnimationUtils.loadAnimation(this,R.anim.logo_animation);
+        Animation an1= AnimationUtils.loadAnimation(this,R.anim.pro_animation);
         logo.startAnimation(an1);
         Animation an2= AnimationUtils.loadAnimation(this,R.anim.app_name_animation);
         spals_text.startAnimation(an2);
 
-        Handler handler = new Handler();
+         handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -42,7 +43,6 @@ TextView spals_text;
                     startActivity(intent);
                     finish();
                 }
-
             }
         }, 3000);
     }

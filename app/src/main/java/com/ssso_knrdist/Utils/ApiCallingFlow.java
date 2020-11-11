@@ -111,7 +111,6 @@ public abstract class ApiCallingFlow {
      */
     private void initializeViews() {
         btnTryAgain.setVisibility(View.GONE);
-
         tvApiError.setVisibility(View.GONE);
         netWorkErrorLayout.setVisibility(View.GONE);
         if (isTransparent) {

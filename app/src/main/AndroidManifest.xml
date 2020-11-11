@@ -12,9 +12,9 @@
         android:roundIcon="@drawable/saibaba_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".Activties.RegisterActivity"></activity>
         <activity android:name=".BottomPageActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".Activties.LoginActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
