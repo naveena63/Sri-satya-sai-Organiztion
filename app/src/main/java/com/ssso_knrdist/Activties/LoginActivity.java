@@ -19,8 +19,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.ssso_knrdist.BottomPageActivity;
-import com.ssso_knrdist.PrefManager;
+import com.ssso_knrdist.Utils.PrefManager;
 import com.ssso_knrdist.R;
 import com.ssso_knrdist.Utils.ApiCallingFlow;
 import com.ssso_knrdist.Utils.Urls;
@@ -113,7 +112,7 @@ Button btn_login;
                                 prefManager.setEmailId(email);
                                 prefManager.storeValue(PrefManager.PHONE_NUMBER, phone);
                                 prefManager.setPhoneNumber(phone);
-
+                                prefManager.storeValue(prefManager.APP_USER_LOGIN, true);
 
 
                                     Intent intent = new Intent(LoginActivity.this, BottomPageActivity.class);

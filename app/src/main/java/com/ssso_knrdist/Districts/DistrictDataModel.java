@@ -1,4 +1,4 @@
-package com.ssso_knrdist;
+package com.ssso_knrdist.Districts;
 
 public class DistrictDataModel  {
 

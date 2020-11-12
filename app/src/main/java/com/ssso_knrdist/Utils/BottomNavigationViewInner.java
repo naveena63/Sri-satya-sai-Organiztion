@@ -1,4 +1,4 @@
-package com.ssso_knrdist;
+package com.ssso_knrdist.Utils;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

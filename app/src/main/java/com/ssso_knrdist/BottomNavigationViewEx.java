@@ -13,6 +13,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.ssso_knrdist.Utils.BottomNavigationViewInner;
 
 public class BottomNavigationViewEx extends BottomNavigationViewInner {
 

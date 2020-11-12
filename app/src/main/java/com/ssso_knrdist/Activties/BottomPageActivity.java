@@ -1,4 +1,4 @@
-package com.ssso_knrdist;
+package com.ssso_knrdist.Activties;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +13,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.ssso_knrdist.Districts.HomeFragment;
+import com.ssso_knrdist.R;
 import com.ssso_knrdist.databinding.ActivityBottomPageBinding;
 import java.util.ArrayList;
 import java.util.List;

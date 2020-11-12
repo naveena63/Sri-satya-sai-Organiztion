@@ -19,8 +19,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.ssso_knrdist.BottomPageActivity;
-import com.ssso_knrdist.PrefManager;
+import com.ssso_knrdist.Utils.PrefManager;
 import com.ssso_knrdist.R;
 import com.ssso_knrdist.Utils.ApiCallingFlow;
 import com.ssso_knrdist.Utils.Urls;
@@ -76,13 +75,16 @@ public class RegisterActivity extends AppCompatActivity {
 
         final String password = input_paswrd.getText().toString();
         final String mobile = input_mobilenum.getText().toString();
+        final String name = input_username.getText().toString();
+        final String dob = input_dateofbirth.getText().toString();
+
 ;
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Urls.register,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Log.e("login response", "" + response);
-                        apiCallingFlow.onSuccessResponse();
+                        Log.e("reg response", "" + response);
+                       // apiCallingFlow.onSuccessResponse();
                         try {
                             JSONObject object = new JSONObject(response);
                             String status = object.getString("status");
@@ -126,7 +128,7 @@ public class RegisterActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        apiCallingFlow.onErrorResponse();
+                       // apiCallingFlow.onErrorResponse();
 
                         Toast.makeText(RegisterActivity.this, error.toString(), Toast.LENGTH_LONG).show();
                         Log.i("An", "_-------------Error--------------------" + error.toString());
@@ -137,6 +139,9 @@ public class RegisterActivity extends AppCompatActivity {
                 Map<String, String> map = new HashMap<String, String>();
                 map.put("phone", mobile);
                 map.put("password", password);
+                map.put("name", name);
+                map.put("gender", password);
+                map.put("dob", dob);
                 return map;
             }
         };

@@ -8,7 +8,9 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.ssso_knrdist.Activties.BottomPageActivity;
 import com.ssso_knrdist.Activties.LoginActivity;
+import com.ssso_knrdist.Utils.PrefManager;
 
 public class SplashActivity extends AppCompatActivity {
 PrefManager prefManager;

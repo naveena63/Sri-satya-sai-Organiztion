@@ -37,9 +37,9 @@
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-
+android:fontFamily="@font/alegreya_sans_sc_medium"
         android:text="jaknka"
-        android:textColor="#655656"
+        android:textColor="#0B0B0B"
 
-        android:textSize="12dp" />
+        android:textSize="15dp" />
 </LinearLayout>

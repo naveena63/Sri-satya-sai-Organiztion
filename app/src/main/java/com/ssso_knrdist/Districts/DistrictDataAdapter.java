@@ -1,8 +1,7 @@
-package com.ssso_knrdist;
+package com.ssso_knrdist.Districts;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
+import com.ssso_knrdist.R;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.ssso_knrdist;
+package com.ssso_knrdist.HomeBanners;
 
 import android.content.Context;
 import android.util.Log;
@@ -13,6 +13,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
+import com.ssso_knrdist.R;
 
 import java.util.List;
 
