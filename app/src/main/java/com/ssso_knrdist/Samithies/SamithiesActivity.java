@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.widget.TextView;
 
@@ -14,6 +15,9 @@ import com.google.android.material.tabs.TabLayout;
 import com.ssso_knrdist.Districts.AllNotificationFragment;
 import com.ssso_knrdist.Districts.DistrictFragment;
 import com.ssso_knrdist.R;
+import com.ssso_knrdist.Utils.PrefManager;
+import com.ssso_knrdist.Utils.Urls;
+import com.ssso_knrdist.Wings.WingsDataFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,17 +27,28 @@ public class SamithiesActivity extends AppCompatActivity {
     private int currentPage;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    String service_id;
+    PrefManager prefManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_samithies);
+        prefManager = new PrefManager(this);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         createViewPager(viewPager);
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
+        service_id = getIntent().getStringExtra("serviceid");
+        prefManager.storeValue(Urls.service_id, service_id);
+        prefManager.setServiceId(service_id);
+
+
+        Log.i("serviceid", "" + service_id);
         createTabIcons();
     }
+
     private void createTabIcons() {
 
         TextView tabOne = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
@@ -46,13 +61,19 @@ public class SamithiesActivity extends AppCompatActivity {
         //  tabTwo.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_baseline_notifications_active_24, 0, 0);
         tabLayout.getTabAt(1).setCustomView(tabTwo);
 
+        TextView tabthree = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        tabthree.setText("All Wings");
+        //  tabTwo.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_baseline_notifications_active_24, 0, 0);
+        tabLayout.getTabAt(2).setCustomView(tabthree);
+
 
     }
 
     private void createViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFrag(new AllNotificationFragment(), "Tab 1");
-        adapter.addFrag(new DistrictFragment(), "Tab 2");
+        adapter.addFrag(new DistrictNotifFragment(), "Tab 1");
+        adapter.addFrag(new SamithiesFragment(), "Tab 2");
+        adapter.addFrag(new WingsDataFragment(), "Tab 3");
 
         viewPager.setAdapter(adapter);
     }
@@ -85,8 +106,6 @@ public class SamithiesActivity extends AppCompatActivity {
             return mFragmentTitleList.get(position);
         }
     }
-
-
 
 
 }

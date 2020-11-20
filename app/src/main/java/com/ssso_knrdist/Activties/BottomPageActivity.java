@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -14,6 +16,10 @@ import android.view.View;
 import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.ssso_knrdist.Districts.HomeFragment;
+import com.ssso_knrdist.Fragments.GalleryFragment;
+import com.ssso_knrdist.Fragments.ProfileFragment;
+import com.ssso_knrdist.Fragments.SocialMediaLinksFragment;
+import com.ssso_knrdist.Fragments.ThoughtOfDayFragment;
 import com.ssso_knrdist.R;
 import com.ssso_knrdist.databinding.ActivityBottomPageBinding;
 import java.util.ArrayList;
@@ -46,19 +52,19 @@ public class BottomPageActivity extends AppCompatActivity {
         homefragment.setArguments(bundle);
 
         // create backup fragment and add it
-        HomeFragment notifactns = new HomeFragment();
+        GalleryFragment notifactns = new GalleryFragment();
         bundle = new Bundle();
         bundle.putString("title", "notifications");
         notifactns.setArguments(bundle);
 
         // create friends fragment and add it
-        HomeFragment messages = new HomeFragment();
+        ThoughtOfDayFragment thoughtOfDayFragment = new ThoughtOfDayFragment();
         bundle = new Bundle();
         bundle.putString("title", "messages");
-        messages.setArguments(bundle);
+        thoughtOfDayFragment.setArguments(bundle);
 
         // create friends fragment and add it
-        HomeFragment profile = new HomeFragment();
+        ProfileFragment profile = new ProfileFragment();
         bundle = new Bundle();
         bundle.putString("title", "profile");
         profile.setArguments(bundle);
@@ -67,13 +73,11 @@ public class BottomPageActivity extends AppCompatActivity {
         // add to fragments for adapter
         fragments.add(homefragment);
         fragments.add(notifactns);
-        fragments.add(messages);
+        fragments.add(thoughtOfDayFragment);
         fragments.add(profile);
     }
 
-    /**
-     * change BottomNavigationViewEx style
-     */
+
     private void initView() {
         bind.bnve.enableItemShiftingMode(false);
         bind.bnve.enableShiftingMode(false);
@@ -84,9 +88,6 @@ public class BottomPageActivity extends AppCompatActivity {
         bind.vp.setAdapter(adapter);
     }
 
-    /**
-     * set listeners
-     */
     private void initEvent() {
         // set listener to change the current item of view pager when click bottom nav item
         bind.bnve.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -147,7 +148,8 @@ public class BottomPageActivity extends AppCompatActivity {
         bind.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(BottomPageActivity.this, "Center", Toast.LENGTH_SHORT).show();
+
+               // Toast.makeText(BottomPageActivity.this, "Center", Toast.LENGTH_SHORT).show();
             }
         });
     }

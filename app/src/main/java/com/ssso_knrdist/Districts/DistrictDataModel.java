@@ -1,11 +1,12 @@
 package com.ssso_knrdist.Districts;
 
-public class DistrictDataModel  {
+public class DistrictDataModel {
 
     String service_id;
     String category_name;
 
     String categroy_icon;
+
     public String getSub_category_status() {
         return sub_category_status;
     }

@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -42,13 +43,17 @@ public class DistrictFragment extends Fragment {
     List<DistrictDataModel> districtDataModelList;
     ApiCallingFlow apiCallingFlow;
     PrefManager prefManager;
+    TextView no_packages_available;
   View view;
+    String service_ID;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
      view= inflater.inflate(R.layout.fragment_district, container, false);
      recyclerView=view.findViewById(R.id.recycleview);
+        no_packages_available=view.findViewById(R.id.no_packages_available);
+
      prefManager=new PrefManager(getContext());
         GridLayoutManager manager = new GridLayoutManager(getActivity(), 2, GridLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(manager);
@@ -91,8 +96,9 @@ api();
                                     JSONObject jsonObject1 = jsonArray.getJSONObject(i);
                                     String category_name = jsonObject1.getString("category_name");
                                     String category_icon = jsonObject1.getString("category_icon");
-                                    String service_ID = jsonObject1.getString("id");
-
+                                     service_ID = jsonObject1.getString("id");
+//                                    prefManager.storeValue(Urls.service_id,service_ID);
+//                                    prefManager.setServiceId(service_ID);
 
                                     Log.i("servic", "servic" + category_name + "" + category_icon+" "+" "+service_ID);
                                     districtDataModel = new DistrictDataModel();
@@ -101,15 +107,22 @@ api();
                                     districtDataModel.setService_id(service_ID);
 
 
-                                    prefManager.storeValue(PrefManager.SERVICE_ID,service_ID);
-                                    prefManager.setServiceId(service_ID);
+
                                     districtDataModelList.add(districtDataModel);
 
                                     Log.i("serviceId", "serviceId" + prefManager.getServiceId());
                                 }
                             }
-                            districtDataAdapter = new DistrictDataAdapter(districtDataModelList);
-                            recyclerView.setAdapter(districtDataAdapter);
+
+                            if (districtDataModelList.size() > 0) {
+                                districtDataAdapter = new DistrictDataAdapter(districtDataModelList);
+                                recyclerView.setAdapter(districtDataAdapter);
+                                no_packages_available.setVisibility(View.GONE);
+                            }
+                         else {
+                            no_packages_available.setText(jsonObject.getString("msg"));
+                            no_packages_available.setVisibility(View.VISIBLE);
+                        }
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }

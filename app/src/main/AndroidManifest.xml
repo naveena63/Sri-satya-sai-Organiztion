@@ -12,7 +12,9 @@
         android:roundIcon="@drawable/saibaba_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Samithies.SamithiesActivity"></activity>
+        <activity android:name=".Wings.NotificationActivity"></activity>
+        <activity android:name=".Wings.WingsActivity" />
+        <activity android:name=".Samithies.SamithiesActivity" />
         <activity android:name=".Activties.RegisterActivity" />
         <activity android:name=".Activties.BottomPageActivity" />
         <activity android:name=".Activties.LoginActivity" />
@@ -23,6 +25,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name=".MyMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
 
         <meta-data
             android:name="preloaded_fonts"

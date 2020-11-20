@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/relative_layout"
     tools:context=".Samithies.SamithiesFragment">
 
 <androidx.recyclerview.widget.RecyclerView
@@ -10,4 +11,33 @@
     android:layout_height="wrap_content"
     android:id="@+id/recycleview"
     />
-</LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_below="@id/recycleview"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/no_packages_available"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="No data"
+            android:drawableTop="@drawable/icon_box"
+            android:textStyle="bold"
+
+            android:textSize="@dimen/textSize_18sp"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/proceed_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:text="Continue"
+            android:textColor="#ffffff"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

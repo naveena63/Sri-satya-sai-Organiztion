@@ -23,7 +23,7 @@
         android:contentDescription="TODO" />
 <TextView
     android:layout_width="match_parent"
-  android:text="@string/app_name"
+  android:text="@string/name"
     android:textColor="@color/white"
   android:textSize="25dp"
     android:gravity="center"

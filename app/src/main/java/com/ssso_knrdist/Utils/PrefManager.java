@@ -8,20 +8,17 @@ public class PrefManager {
     private SharedPreferences pref;
     private SharedPreferences.Editor editor;
     public static final String APP_USER_LOGIN = "login";
-    public static final String ADDRESS_FILLED = "address";
-    // Shared preferences file name
+
+
     public static final String PREF_NAME = "nadk";
     public static final String PHONE_NUMBER = "phone_number";
     public static final String EMAIL_ID = "email_id";
-    public static final String PASSWORD = "password";
     public static final String USERNAME = "name";
     public static final String USER_ID = "user_id";
     public static final String SERVICE_ID = "service_id";
-    public static final String ADDRESS = "add";
-    public static final String LOCATIONAREA = "area";
-    public static final String LOCATIONCITY = "city";
-    public static final String PINCODE = "assee";
-    public static final String SERVICENAME = "city";
+    public static final String SAMITHI_ID = "service_id";
+    public static final String SAMITHI_service_ID = "service_id";
+
 
 
     public PrefManager(Context context) {
@@ -83,51 +80,33 @@ public class PrefManager {
         return pref.getString(SERVICE_ID, "");
     }
 
-    public void setAddress(String address) {
-        editor.putString(ADDRESS, address);
+ public void setSAMITHI_service_ID(String samithi_service_id) {
+        editor.putString(SAMITHI_service_ID, samithi_service_id);
         editor.commit();
     }
 
-    public String getAddress() {
-        return pref.getString(ADDRESS, "");
+
+    public String getSAMITHI_service_ID() {
+        return pref.getString(SAMITHI_service_ID, "");
     }
 
-    public void setServicename(String servicename) {
-        editor.putString(SERVICENAME, servicename);
+
+
+
+
+
+
+    public void setSamithiId(String samithiId) {
+        editor.putString(SAMITHI_ID, samithiId);
         editor.commit();
     }
 
-    public String getServicename() {
-        return pref.getString(SERVICENAME, "");
-    }
 
-    public void setLocationarea(String locationarea) {
-        editor.putString(locationarea, locationarea);
-        editor.commit();
-    }
-
-    public String getLocationarea() {
-        return pref.getString(LOCATIONAREA, "");
-    }
-
-    public void setLocationcity(String locationcity) {
-        editor.putString(locationcity, locationcity);
-        editor.commit();
-    }
-
-    public String getLocationcity() {
-        return pref.getString(LOCATIONCITY, "");
+    public String getSamithiId() {
+        return pref.getString(SAMITHI_ID, "");
     }
 
 
-    public String getPASSWORD() {
-        return pref.getString(PASSWORD, "");
-    }
-
-    public void setPassword(String password) {
-        editor.putString(PASSWORD, password);
-        editor.commit();
-    }
 
     public void setUsername(String username) {
         editor.putString(USERNAME, username);
@@ -150,14 +129,6 @@ public class PrefManager {
     }
 
 
-    public void setPincode(String pincode) {
-        editor.putString(PINCODE, pincode);
-        editor.commit();
-    }
-
-    public String getPincode() {
-        return pref.getString(PINCODE, "");
-    }
 
 
     public void logout() {
