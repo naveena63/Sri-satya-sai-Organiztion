@@ -18,6 +18,7 @@ public class PrefManager {
     public static final String SERVICE_ID = "service_id";
     public static final String SAMITHI_ID = "service_id";
     public static final String SAMITHI_service_ID = "service_id";
+    public static final String DOB = "dob";
 
 
 
@@ -116,6 +117,16 @@ public class PrefManager {
 
     public String getUsername() {
         return pref.getString(USERNAME, "");
+    }
+  public void setDob(String dob) {
+        editor.putString(DOB, dob);
+
+        editor.commit();
+    }
+
+    public String getDob() {
+        return pref.getString(DOB, "");
+
     }
 
 

@@ -7,118 +7,276 @@
 
     tools:context=".Districts.AllNotificationFragment">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingVertical="2dp"
-        android:paddingRight="10dp"
-        android:clipToPadding="false">
-
-        <!--        <View-->
-        <!--            android:id="@+id/avatar"-->
-        <!--            android:layout_alignParentLeft="true"-->
-        <!--            android:scaleType="centerInside"-->
-        <!--            android:background="@drawable/circle"-->
-        <!--            android:layout_width="34dp"-->
-        <!--            android:layout_height="34dp" />-->
-
-        <TextView
-            android:id="@+id/name"
-            android:layout_marginLeft="15dp"
-
-
-            android:layout_width="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="4dp"
-            android:text=""/>
+            android:orientation="vertical"
+            >
+            <RelativeLayout
+                android:id="@+id/relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="2dp"
+                android:paddingRight="10dp"
+                android:clipToPadding="false">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/message_body"
-            android:layout_below="@+id/name"
-            android:layout_alignLeft="@+id/name"
-            android:background="@drawable/their_message"
-            android:paddingVertical="12dp"
-            android:paddingHorizontal="16dp"
-            android:fontFamily="@font/alegreya_sans_sc_medium"
-            android:elevation="2dp"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            android:text="How are you doing? This is a long message that should probably wrap."
-            />
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingVertical="2dp"
-        android:paddingRight="10dp"
-        android:clipToPadding="false">
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:text=""/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/message_body"
+                    android:layout_below="@+id/name"
+                    android:layout_alignLeft="@+id/name"
+                    android:background="@drawable/their_message"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="16dp"
+                    android:fontFamily="@font/alegreya_sans_sc_medium"
+                    android:elevation="2dp"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:text="@string/notifictaion_1"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="2dp"
+                android:paddingRight="10dp"
+                android:clipToPadding="false">
+
+                <TextView
+                    android:id="@+id/name1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:text=""/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/message_body1"
+                    android:layout_below="@+id/name1"
+                    android:layout_alignLeft="@+id/name1"
+                    android:background="@drawable/their_message"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="16dp"
+                    android:elevation="2dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/alegreya_sans_sc_medium"
+                    android:textSize="15dp"
+                    android:text="@string/notifictaion_2" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="2dp"
+                android:clipToPadding="false">
+
+                <!--        <View-->
+                <!--            android:id="@+id/avatar2"-->
+                <!--            android:layout_alignParentLeft="true"-->
+                <!--            android:scaleType="centerInside"-->
+                <!--            android:background="@drawable/circle"-->
+                <!--            android:layout_width="34dp"-->
+                <!--            android:layout_height="34dp" />-->
+
+                <TextView
+                    android:id="@+id/name2"
+                    android:layout_marginLeft="15dp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:text=""/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/message_body2"
+                    android:layout_below="@+id/name2"
+                    android:layout_alignLeft="@+id/name2"
+                    android:background="@drawable/their_message"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="16dp"
+                    android:elevation="2dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/alegreya_sans_sc_medium"
+                    android:textSize="15dp"
+                    android:text="@string/notifictaion_3" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="2dp"
+                android:clipToPadding="false">
 
 
 
-        <TextView
-            android:id="@+id/name1"
-            android:layout_marginLeft="15dp"
+                <TextView
+                    android:id="@+id/name3"
+                    android:layout_marginLeft="15dp"
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="4dp"
-            android:text=""/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:text=""/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/message_body1"
-            android:layout_below="@+id/name1"
-            android:layout_alignLeft="@+id/name1"
-            android:background="@drawable/their_message"
-            android:paddingVertical="12dp"
-            android:paddingHorizontal="16dp"
-            android:elevation="2dp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/alegreya_sans_sc_medium"
-            android:textSize="15dp"
-            android:text="How are you doing? This is a long message that should probably wrap."
-            />
-    </RelativeLayout> <RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingVertical="2dp"
-    android:clipToPadding="false">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/message_body3"
+                    android:layout_below="@+id/name3"
+                    android:layout_alignLeft="@+id/name3"
+                    android:background="@drawable/their_message"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="16dp"
+                    android:elevation="2dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/alegreya_sans_sc_medium"
+                    android:textSize="15dp"
+                    android:text="@string/notifictaion_1" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="2dp"
+                android:clipToPadding="false">
 
-    <!--        <View-->
-    <!--            android:id="@+id/avatar2"-->
-    <!--            android:layout_alignParentLeft="true"-->
-    <!--            android:scaleType="centerInside"-->
-    <!--            android:background="@drawable/circle"-->
-    <!--            android:layout_width="34dp"-->
-    <!--            android:layout_height="34dp" />-->
 
-    <TextView
-        android:id="@+id/name2"
-        android:layout_marginLeft="15dp"
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingBottom="4dp"
-        android:text=""/>
+                <TextView
+                    android:id="@+id/name4"
+                    android:layout_marginLeft="15dp"
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/message_body2"
-        android:layout_below="@+id/name2"
-        android:layout_alignLeft="@+id/name2"
-        android:background="@drawable/their_message"
-        android:paddingVertical="12dp"
-        android:paddingHorizontal="16dp"
-        android:elevation="2dp"
-        android:textColor="@color/black"
-        android:fontFamily="@font/alegreya_sans_sc_medium"
-        android:textSize="15dp"
-        android:text="How are you doing? This is a long message that should probably wrap."
-        />
-</RelativeLayout>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:text=""/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/message_body4"
+                    android:layout_below="@+id/name4"
+                    android:layout_alignLeft="@+id/name4"
+                    android:background="@drawable/their_message"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="16dp"
+                    android:elevation="2dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/alegreya_sans_sc_medium"
+                    android:textSize="15dp"
+                    android:text="@string/notifictaion_2" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="2dp"
+                android:clipToPadding="false">
+
+
+
+                <TextView
+                    android:id="@+id/name5"
+                    android:layout_marginLeft="15dp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:text=""/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/message_body5"
+                    android:layout_below="@+id/name5"
+                    android:layout_alignLeft="@+id/name5"
+                    android:background="@drawable/their_message"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="16dp"
+                    android:elevation="2dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/alegreya_sans_sc_medium"
+                    android:textSize="15dp"
+                    android:text="@string/notifictaion_2" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="2dp"
+                android:clipToPadding="false">
+
+
+
+                <TextView
+                    android:id="@+id/name6"
+                    android:layout_marginLeft="15dp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:text=""/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/message_body6"
+                    android:layout_below="@+id/name6"
+                    android:layout_alignLeft="@+id/name6"
+                    android:background="@drawable/their_message"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="16dp"
+                    android:elevation="2dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/alegreya_sans_sc_medium"
+                    android:textSize="15dp"
+                    android:text="@string/notifictaion_3" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="2dp"
+                android:clipToPadding="false">
+
+
+
+                <TextView
+                    android:id="@+id/name7"
+                    android:layout_marginLeft="15dp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:text=""/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/message_body7"
+                    android:layout_below="@+id/name7"
+                    android:layout_alignLeft="@+id/name7"
+                    android:background="@drawable/their_message"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="16dp"
+                    android:elevation="2dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/alegreya_sans_sc_medium"
+                    android:textSize="15dp"
+                    android:text="@string/notifictaion_1" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

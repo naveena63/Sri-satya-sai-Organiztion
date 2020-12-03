@@ -103,7 +103,6 @@ View view;
                                     galleryModel.setDate_of_post(date_of_post);
                                     galleryModel.setLink(link);
 
-
                                     galleryModelList.add(galleryModel);
 
                                     Log.i("galley", "galley" +response);
@@ -115,16 +114,13 @@ View view;
                                 no_packages_available.setVisibility(View.GONE);
                             }
                             else {
-                                no_packages_available.setText(jsonObject.getString("msg"));
+                                no_packages_available.setText("no links");
                                 no_packages_available.setVisibility(View.VISIBLE);
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-
-
                         Log.i("", "_--------------Gallery Response----------------" + response);
-
 
                     }
                 },
@@ -132,9 +128,6 @@ View view;
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         apiCallingFlow.onErrorResponse();
-
-
-                        // Toast.makeText(HomePageActivity.this, "Something Went wrong.. try again", Toast.LENGTH_SHORT).show();
 
                     }
                 }) {

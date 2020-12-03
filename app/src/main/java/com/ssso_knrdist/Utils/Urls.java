@@ -10,12 +10,7 @@ public class Urls {
     public static String gallery_data= "https://tubaticsoftsolutions.com/sssso/api/District/drive_link";
     public static String thought_day= "https://tubaticsoftsolutions.com/sssso/api/District/thought_of_the_day";
 
-
-
-
     public static String service_id = "rewardpoints";
     public static String samithie_id = "rewardpoints";
     public static String samit_serv_id = "rewardpoints";
-
-
 }

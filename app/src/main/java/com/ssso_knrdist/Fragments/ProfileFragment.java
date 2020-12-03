@@ -20,7 +20,7 @@ public class ProfileFragment extends Fragment {
 
     View view;
     PrefManager prefManager;
-    TextView userName, mobileNumber, mailTv;
+    TextView userName, mobileNumber, dobtv;
     Button logout;
 
     @Override
@@ -30,13 +30,14 @@ public class ProfileFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_profile, container, false);
         userName = view.findViewById(R.id.username);
         mobileNumber = view.findViewById(R.id.mobileTv);
-        mailTv = view.findViewById(R.id.emailTv);
+        dobtv = view.findViewById(R.id.dobTv);
         logout = view.findViewById(R.id.logout);
 
         prefManager = new PrefManager(getContext());
-
         userName.setText(prefManager.getUsername());
         mobileNumber.setText(prefManager.getPhoneNumber());
+        dobtv.setText(prefManager.getDob());
+
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

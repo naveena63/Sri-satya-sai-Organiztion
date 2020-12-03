@@ -64,6 +64,7 @@
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="20dp"
                     android:text="username"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
             </LinearLayout>
             <LinearLayout
@@ -76,15 +77,16 @@
                 <ImageView
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:src="@drawable/ic_baseline_email_24" />
+                    android:src="@drawable/ic_baseline_today_24" />
 
                 <TextView
-                    android:id="@+id/emailTv"
+                    android:id="@+id/dobTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="20dp"
-                    android:text="Wiliam@gmail.com"
+                    android:text="@string/dob"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -103,6 +105,7 @@
                 <TextView
                     android:layout_width="wrap_content"
 android:id="@+id/mobileTv"
+                    android:textColor="@color/black"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="20dp"

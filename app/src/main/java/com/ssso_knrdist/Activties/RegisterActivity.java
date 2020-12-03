@@ -107,6 +107,9 @@ public class RegisterActivity extends AppCompatActivity {
                                 prefManager.storeValue(PrefManager.PHONE_NUMBER, phone);
                                 prefManager.setPhoneNumber(phone);
 
+                                prefManager.storeValue(PrefManager.DOB, dob);
+                                prefManager.setDob(dob);
+
                                 Intent intent = new Intent(RegisterActivity.this, BottomPageActivity.class);
                                 startActivity(intent);
                                 finish();
